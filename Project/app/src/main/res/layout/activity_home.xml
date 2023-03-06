@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/txtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="322dp" />
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/purple_200"
+        android:padding="20dp"
+        />
+    <Button
+        android:id="@+id/Listttt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Btn ke listview ygy"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/purple_200"
+        android:padding="20dp"
+        />
+    <Button
+        android:id="@+id/sqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Btn ke sqlite ygy"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/purple_200"
+        android:padding="20dp"
+        />
+</LinearLayout>
