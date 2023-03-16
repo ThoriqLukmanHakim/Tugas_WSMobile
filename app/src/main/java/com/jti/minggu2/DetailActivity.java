@@ -40,10 +40,13 @@ public class DetailActivity extends AppCompatActivity {
 
         String judul = getIntent().getStringExtra("id");
         String deskripsi = getIntent().getStringExtra("content");
+        String nopung = getIntent().getStringExtra("nopung");
         String image = getIntent().getStringExtra("image");
+        String nat = getIntent().getStringExtra("Nat");
 
         tvJudul.setText(judul);
-        tvDeskripsi.setText(deskripsi);
+        tvDeskripsi.setText("Dia adalah "+judul +" Dan dia Bermain Sebagai "+deskripsi + " di klub Manchester United dengan Nomor Punggung " + nopung
+        +" Dan dia Pemain Berkebangsaan " +nat);
         this.image.setImageResource(this.image.getContext().getResources().getIdentifier(image, "drawable", this.image.getContext().getPackageName()));
     }
 }

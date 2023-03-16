@@ -20,13 +20,13 @@
         android:textAlignment="center"
         android:textSize="50dp"
         android:textStyle="normal|bold"
-        android:textColor="#1316BA"
+        android:textColor="@color/mu"
         />
     <ImageView
         android:layout_width="166dp"
         android:layout_height="156dp"
         android:layout_gravity="center"
-        android:background="@drawable/icon" />
+        android:background="@drawable/manchester" />
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"

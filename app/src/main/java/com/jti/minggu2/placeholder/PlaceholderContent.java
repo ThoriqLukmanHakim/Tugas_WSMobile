@@ -23,7 +23,7 @@ public class PlaceholderContent {
      */
     public static final Map<String, PlaceholderItem> ITEM_MAP = new HashMap<String, PlaceholderItem>();
 
-    private static final int COUNT = 3;
+    private static final int COUNT = 11;
 
     static {
         // Add some sample items.
@@ -38,15 +38,23 @@ public class PlaceholderContent {
     }
 
     private static PlaceholderItem createPlaceholderItem(int position) {
-        return new PlaceholderItem(MakeTitle(position),MakeContent(position),MakeImage(position));
+        return new PlaceholderItem(MakeTitle(position),MakeContent(position),MakeImage(position),makeNopung(position),makeNat(position));
     }
 
     private static String MakeImage(int position){
         StringBuilder builder = new StringBuilder();
         String image[] = {
                 "img_1",
-                "img_2",
-                "img_3"
+                "img_20",
+                "img_6",
+                "img_19",
+                "img_23",
+                "img_18",
+                "img_14",
+                "img_10",
+                "img_8",
+                "img_21",
+                "img_27",
         };
         builder.append(image [position - 1]);
         return builder.toString();
@@ -56,18 +64,73 @@ public class PlaceholderContent {
         StringBuilder builder = new StringBuilder();
         String judul[] = {
                 "David De Gea",
+                "Diogo Dalot",
+                "Lisandro Martinez",
+                "Raphael Varane",
+                "Luke Shaw",
+                "Casemiro",
+                "Christian Eriksen",
                 "Marcus Rashford",
-                "Casemiro"
+                "Bruno Fernandes",
+                "Antony",
+                "Wout Weghorst",
         };
         builder.append(judul [position - 1]);
         return  builder.toString();
     }
+
+    private static String makeNopung(int position){
+        StringBuilder builder = new StringBuilder();
+        String nopung[] = {
+                "1",
+                "20",
+                "6",
+                "19",
+                "23",
+                "18",
+                "14",
+                "10",
+                "8",
+                "21",
+                "27",
+        };
+        builder.append(nopung [position - 1]);
+        return  builder.toString();
+    }
+
+    private static String makeNat(int position){
+        StringBuilder builder = new StringBuilder();
+        String Nationality[] = {
+                "Spanyol",
+                "Portugal",
+                "Argentina",
+                "France",
+                "England",
+                "Brazil",
+                "Denmark",
+                "England",
+                "Portugal",
+                "Brazil",
+                "Netherlands",
+        };
+        builder.append(Nationality [position - 1]);
+        return  builder.toString();
+    }
+
     private static String MakeContent(int position){
         StringBuilder builder = new StringBuilder();
         String isi[] = {
                 "Goal Keeper",
+                "Left Back",
+                "Center Back",
+                "Center Back",
+                "Right Back",
+                "Defensive Midfielder",
+                "Defensive Midfielder",
                 "Left Winger",
-                "Defensive Midfielder"
+                "Attacking Midfielder",
+                "Right Winger",
+                "Center Forward",
         };
         builder.append(isi [position - 1]);
         return  builder.toString();
@@ -80,12 +143,16 @@ public class PlaceholderContent {
         public final String id;
         public final String content;
         public final String image;
+        public final String nopung;
+        public final String Nat;
 
 
-        public PlaceholderItem(String id, String content,  String image) {
+        public PlaceholderItem(String id, String content,  String image, String nopung, String Nat) {
             this.id = id;
             this.content = content;
             this.image = image;
+            this.nopung = nopung;
+            this.Nat = Nat;
         }
 
         @Override

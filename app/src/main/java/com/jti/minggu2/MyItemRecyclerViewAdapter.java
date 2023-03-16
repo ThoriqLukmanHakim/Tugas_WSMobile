@@ -41,6 +41,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
         holder.mItem = mValues.get(position);
         holder.mIdView.setText(mValues.get(position).id);
         holder.mContentView.setText(mValues.get(position).content);
+        holder.mnoPung.setText(mValues.get(position).nopung);
         holder.mImageView.setImageResource(holder.mImageView.getContext().getResources().getIdentifier(mValues.get(position).image, "drawable", holder.mImageView.getContext().getPackageName()));
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +59,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final TextView mIdView;
         public final TextView mContentView;
+        public final TextView mnoPung;
         public PlaceholderItem mItem;
         public ImageView mImageView;
         public LinearLayout linearLayout;
@@ -67,6 +69,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
             mIdView = binding.itemNumber;
             mContentView = binding.content;
             mImageView = binding.imageV;
+            mnoPung = binding.nopung;
             linearLayout = binding.linearLayout;
         }
 
@@ -81,6 +84,8 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
             intent.putExtra("id", mItem.id);
             intent.putExtra("content", mItem.content);
             intent.putExtra("image", mItem.image);
+            intent.putExtra("nopung", mItem.nopung);
+            intent.putExtra("Nat",mItem.Nat);
             context.startActivity(intent);
         }
     }
