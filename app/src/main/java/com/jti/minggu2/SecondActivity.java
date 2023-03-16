@@ -21,35 +21,18 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second_avtivity);
         pref = getSharedPreferences("data",MODE_PRIVATE);
         String usernamedata = pref.getString("Username",null);
-        Intent intent = getIntent();
-        String data = intent.getStringExtra("username");
-        TextView txt = findViewById(R.id.txtSecondActivity );
-        txt.setText("Helllooooooo ini dr sharedpref "+ usernamedata);
-        Button btnlog,btn2,btn3;
-                btnlog = findViewById(R.id.btnGoToFirstActivity);
-        btnlog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SecondActivity.this, MainActivity.class);
-                Toast.makeText(SecondActivity.this,"Logout nieh", Toast.LENGTH_SHORT).show();
-                startActivity(intent);
-                finish();
-            }
-        });
-        btn2 = findViewById(R.id.btn2);
-       btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(SecondActivity.this,"Halohalohalo", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-       btn3 = findViewById(R.id.btn3);
-       btn3.setOnClickListener(new View.OnClickListener() {
+        String usernameAlamat= pref.getString("Alamat",null);
+        TextView txt = findViewById(R.id.txtnama );
+        txt.setText("Nama: "+ usernamedata);
+        TextView txt2 = findViewById(R.id.txtalamat);
+        txt2.setText("Alamat : "+ usernameAlamat);
+        Button btnback;
+        btnback = findViewById(R.id.btnback);
+        btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
-                Toast.makeText(SecondActivity.this,"Ke 3 yaaa", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SecondActivity.this,"Back To Dashboard", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
                 finish();
             }
